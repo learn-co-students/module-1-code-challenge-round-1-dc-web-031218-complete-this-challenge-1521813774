@@ -16,8 +16,7 @@ class Customer
   end
 
   def self.find_by_name(name)
-    names = name.split(" ")
-    all.find{|n| n.first_name == names[0] && n.last_name == names[1]}
+    all.find{|n| n.first_name == name.split[0] && n.last_name == name.split[1]}
   end
 
   def self.find_all_by_first_name(name)
