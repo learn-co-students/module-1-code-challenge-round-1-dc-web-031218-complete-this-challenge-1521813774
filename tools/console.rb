@@ -47,7 +47,7 @@ puts Customer.find_by_name("Richard Robertson").inspect
 puts Customer.find_all_by_first_name("Richard").inspect
 puts "\nFind Restaurant"
 puts Restaurant.find_by_name("Pho 14").inspect
-puts "\n Review Details"
+puts "\n Restaurant Details"
 puts vietnamese.reviews.inspect
 puts vietnamese.customers.inspect
 
