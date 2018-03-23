@@ -1,5 +1,5 @@
 class Restaurant
-  attr_accessor :name :review
+  attr_accessor :name, :review
 
   @@all = []
 
@@ -16,14 +16,15 @@ class Restaurant
   def self.find_by_name(name)
     self.all.find do |restaurant|
       restaurant == name
+    end
   end
 
   def reviews
-    
+    Review.all.select { |r| r.restaurant == self }
   end
 
   def customers
-    Customer.all.collect {|name| name.review(self)}
+    reviews.collect { |review| review.customer }
   end
 
 end

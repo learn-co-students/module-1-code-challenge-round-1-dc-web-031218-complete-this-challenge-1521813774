@@ -19,24 +19,20 @@ class Customer
 
   def self.find_by_name(name)
     @@all.find do |name|
-    name == self.full_name
+      name == self.full_name
+    end
   end
 
   def self.find_all_by_first_name(name)
-    customers_first_name = []
-    @@all.select {|name| name == @first_name}.map
-
-
+    @@all.select {|name| name == @first_name}
   end
 
   def self.all_names
-    full_names = []
-    full_names << full_name
-    full_names
+    self.all.map { |customer| customer.full_name }
   end
 
   def add_review(restaurant, content)
-    
+    Review.new(content, self , restaurant)
   end
 end
 
