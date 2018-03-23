@@ -26,27 +26,28 @@ sixth = dick.add_review(texmex,"ugly")
 
 ###PUTS
 
+puts "\nCustomer"
 puts first.customer
 puts second.customer
 puts third.customer
-puts "\n"
+puts "\nFull Name"
+puts cathy.full_name
+puts "\nRestaurant"
 puts fourth.restaurant
 puts fifth.restaurant
 puts sixth.restaurant
-puts "\n"
+puts "\nAll"
 puts Customer.all.inspect
 puts Customer.all_names.inspect
 puts Restaurant.all.inspect
 puts Review.all.inspect
-puts "\n"
+puts "\nFind Customer"
 puts Customer.find_by_name("Annabelle Appleton").inspect
 puts Customer.find_by_name("Richard Robertson").inspect
 puts Customer.find_all_by_first_name("Richard").inspect
-puts "\n"
-puts cathy.full_name
-puts "\n"
+puts "\nFind Restaurant"
 puts Restaurant.find_by_name("Pho 14").inspect
-puts "\n"
+puts "\n Review Details"
 puts vietnamese.reviews.inspect
 puts vietnamese.customers.inspect
 
